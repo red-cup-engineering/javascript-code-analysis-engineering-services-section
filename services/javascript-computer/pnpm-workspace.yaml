@@ -1,0 +1,3 @@
+# This exact leaf was source-verified and published locally during closure recovery.
+minimumReleaseAgeExclude:
+  - '@red-cup-engineering/javascript-algebra@0.1.0'

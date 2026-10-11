@@ -1,0 +1,35 @@
+{
+  "bin": {
+    "javascript-computer": "./src/cli.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/javascript-algebra": "workspace:*",
+    "@red-cup-engineering/javascript-node-services-section": "workspace:*"
+  },
+  "description": "JavaScript computer — projects JavaScript syntax and JSDoc contracts into reusable source-file, executable-behavior, import, documentation, and type-category carriers.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./cli": "./src/cli.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "package.json"
+  ],
+  "main": "./src/index.mjs",
+  "name": "@red-cup-engineering/javascript-computer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/javascript-computer.git"
+  },
+  "scripts": {
+    "test": "node --test \"src/**/*.test.mjs\""
+  },
+  "sideEffects": false,
+  "type": "module",
+  "version": "0.2.6"
+}
