@@ -44,7 +44,11 @@ describe("readImports", () => {
     assert.equal(dyn.find((b) => b.mode === "dynamic")?.specifier, undefined);
   });
 
-  it("ignores side-effect imports (no bindings)", () => {
-    assert.deepEqual(readImports(`import "@emsenn/x";`, "f.mjs"), []);
+  it("counts imports with no bindings as coarse provider reach", () => {
+    const bindings = readImports(`import "@emsenn/x"; import {} from "@emsenn/y";`, "f.mjs");
+    assert.deepEqual(bindings, [
+      { specifier: "@emsenn/x", mode: "side-effect", typeOnly: false },
+      { specifier: "@emsenn/y", mode: "side-effect", typeOnly: false },
+    ]);
   });
 });
