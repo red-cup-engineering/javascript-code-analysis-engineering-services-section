@@ -30,6 +30,9 @@ export function readImports(sourceText) {
   for (const node of program.body) {
     if (node.type === "ImportDeclaration") {
       const specifier = node.source.value;
+      // Executing a module without importing a binding still depends on its
+      // evaluation. Do not let whole-package dead-code sweeps erase it.
+      if (node.specifiers.length === 0) out.push({ specifier, mode: "side-effect", typeOnly: false });
       for (const item of node.specifiers) {
         if (item.type === "ImportDefaultSpecifier") out.push({ specifier, mode: "default", name: "default", typeOnly: false });
         else if (item.type === "ImportNamespaceSpecifier") out.push({ specifier, mode: "namespace", typeOnly: false });
