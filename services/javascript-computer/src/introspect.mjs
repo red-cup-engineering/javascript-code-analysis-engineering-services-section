@@ -89,7 +89,7 @@ export function introspectDeclarationsByFile(entryFiles) {
       } else if (declaration.type === "VariableDeclaration") {
         for (const declarator of declaration.declarations) {
           for (const item of declarationBindings(program, declarator.id, binding)) {
-            declarations.set(item.name, { declaration: declarator, docNode: statement });
+            declarations.set(item.name, { declaration: declarator.id.type === 'Identifier' ? declarator : item.identifier, docNode: statement });
             if (exported) {
               locate(item.name, declarator.id.type === 'Identifier' ? declarator : item.identifier);
               exports.push({ name: item.name, local: item.name });
