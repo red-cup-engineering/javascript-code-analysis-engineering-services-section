@@ -1,3 +1,4 @@
+import { declarationBindings } from './declaration-bindings.mjs';
 // module-corpus — one index over a set of JavaScript modules, answering the
 // cross-module questions a single file cannot: which declaration an imported
 // name finally denotes (through re-exports), which module a node belongs to,
@@ -95,7 +96,10 @@ export function indexModuleCorpus({ files, resolve }) {
         const declaration = statement.declaration;
         if (declaration) {
           if ((declaration.type === "FunctionDeclaration" || declaration.type === "ClassDeclaration") && declaration.id?.name === name) found.push(declaration);
-          if (declaration.type === "VariableDeclaration") for (const declarator of declaration.declarations) if (declarator.id.type === "Identifier" && declarator.id.name === name) found.push(declarator);
+          if (declaration.type === "VariableDeclaration") for (const declarator of declaration.declarations) {
+            const binding = declarationBindings(module.program, declarator.id, bindingOfModule(module)).find(item => item.name === name);
+            if (binding) found.push(declarationOfBinding(binding));
+          }
         }
         for (const specifier of statement.specifiers) {
           if (nameOf(specifier.exported) !== name) continue;

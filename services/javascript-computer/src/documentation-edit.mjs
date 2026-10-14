@@ -1,3 +1,4 @@
+import { declarationBindings } from './declaration-bindings.mjs';
 // documentation-edit — read full declaration source and rewrite the
 // documentary layer (JSDoc) of exported symbols, without touching code.
 //
@@ -11,7 +12,7 @@
 // other byte, including the code body, exactly as written.
 
 import { readFileSync } from "node:fs";
-import { jsdocOf, parseJavaScript } from "@red-cup-engineering/javascript-node-services-section/javascript-parser";
+import { bindJavaScript, jsdocOf, parseJavaScript } from "@red-cup-engineering/javascript-node-services-section/javascript-parser";
 
 const FUNCTION_TYPES = new Set(["FunctionExpression", "ArrowFunctionExpression"]);
 
@@ -20,6 +21,7 @@ const FUNCTION_TYPES = new Set(["FunctionExpression", "ArrowFunctionExpression"]
  *  on an export attaches to the whole export statement. */
 export function exportedDeclarations(program) {
   const out = [];
+  const binding = bindJavaScript(program);
   for (const statement of program.body) {
     if (statement.type !== "ExportNamedDeclaration" && statement.type !== "ExportDefaultDeclaration") continue;
     const declaration = statement.declaration;
@@ -28,9 +30,9 @@ export function exportedDeclarations(program) {
     else if (declaration.type === "ClassDeclaration" && declaration.id) out.push({ name: declaration.id.name, kind: "class", statement, declaration });
     else if (declaration.type === "VariableDeclaration") {
       for (const declarator of declaration.declarations) {
-        if (declarator.id.type !== "Identifier") continue;
-        const isFunction = declarator.init !== null && FUNCTION_TYPES.has(declarator.init.type);
-        out.push({ name: declarator.id.name, kind: isFunction ? "const" : "variable", statement, declaration, declarator });
+        const isFunction = declarator.id.type === 'Identifier' && declarator.init !== null && FUNCTION_TYPES.has(declarator.init.type);
+        for (const item of declarationBindings(program, declarator.id, binding))
+          out.push({ name: item.name, kind: isFunction ? "const" : "variable", statement, declaration, declarator });
       }
     }
   }
