@@ -32,7 +32,7 @@ export function exportedDeclarations(program) {
       for (const declarator of declaration.declarations) {
         const isFunction = declarator.id.type === 'Identifier' && declarator.init !== null && FUNCTION_TYPES.has(declarator.init.type);
         for (const item of declarationBindings(program, declarator.id, binding))
-          out.push({ name: item.name, kind: isFunction ? "const" : "variable", statement, declaration, declarator });
+          out.push({ name: item.binding.name, kind: isFunction ? "const" : "variable", statement, declaration, declarator });
       }
     }
   }
