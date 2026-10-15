@@ -11,7 +11,8 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "test": "node --test \"**/*.test.mjs\""
+    "test": "run-package-tests",
+    "check": "check-package-syntax"
   },
   "main": "./src/index.mjs",
   "files": [
@@ -24,5 +25,8 @@
     },
     "./package.json": "./package.json"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "@red-cup-engineering/jsnode-package-services-section": "workspace:*"
+  }
 }
