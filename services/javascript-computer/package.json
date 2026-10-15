@@ -13,6 +13,8 @@
   },
   "exports": {
     ".": "./src/index.mjs",
+    "./imports": "./src/imports.mjs",
+    "./module-corpus": "./src/module-corpus.mjs",
     "./cli": "./src/cli.mjs",
     "./package.json": "./package.json"
   },
