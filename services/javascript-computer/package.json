@@ -29,9 +29,13 @@
     "url": "git+https://github.com/red-cup-engineering/javascript-computer.git"
   },
   "scripts": {
-    "test": "node --test \"src/**/*.test.mjs\""
+    "test": "run-package-tests",
+    "check": "check-package-syntax"
   },
   "sideEffects": false,
   "type": "module",
-  "version": "0.2.6"
+  "version": "0.2.6",
+  "devDependencies": {
+    "@red-cup-engineering/jsnode-package-services-section": "workspace:*"
+  }
 }
