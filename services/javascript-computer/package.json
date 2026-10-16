@@ -3,11 +3,11 @@
     "javascript-computer": "./src/cli.mjs"
   },
   "dependencies": {
-    "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "workspace:*",
-    "@red-cup-engineering/javascript-algebra": "workspace:*",
-    "@red-cup-engineering/javascript-node-services-section": "workspace:*"
+    "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "0.3.1",
+    "@red-cup-engineering/javascript-algebra": "0.1.2",
+    "@red-cup-engineering/javascript-node-services-section": "0.3.2"
   },
-  "description": "JavaScript computer — projects JavaScript syntax and JSDoc contracts into reusable source-file, executable-behavior, import, documentation, and type-category carriers.",
+  "description": "JavaScript computer \u2014 projects JavaScript syntax and JSDoc contracts into reusable source-file, executable-behavior, import, documentation, and type-category carriers.",
   "engines": {
     "node": ">=22.18"
   },

@@ -1,8 +1,8 @@
 {
   "name": "@red-cup-engineering/javascript-algebra",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "type": "module",
-  "description": "JavaScript type category — types as objects, functions as morphisms (a multicategory of types, domain is a tuple), and assignability as the carrier relation. Pure structure and operation; closures and section reads live in the javascript-topology package.",
+  "description": "JavaScript type category \u2014 types as objects, functions as morphisms (a multicategory of types, domain is a tuple), and assignability as the carrier relation. Pure structure and operation; closures and section reads live in the javascript-topology package.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/red-cup-engineering/javascript-algebra.git"
