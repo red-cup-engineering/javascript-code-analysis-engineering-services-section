@@ -7,7 +7,7 @@
     "@red-cup-engineering/javascript-algebra": "0.1.2",
     "@red-cup-engineering/javascript-node-services-section": "0.3.2"
   },
-  "description": "JavaScript computer \u2014 projects JavaScript syntax and JSDoc contracts into reusable source-file, executable-behavior, import, documentation, and type-category carriers.",
+  "description": "JavaScript computer — projects JavaScript syntax and JSDoc contracts into reusable source-file, executable-behavior, import, documentation, and type-category carriers.",
   "engines": {
     "node": ">=22.18"
   },
@@ -36,6 +36,6 @@
   "type": "module",
   "version": "0.2.6",
   "devDependencies": {
-    "@red-cup-engineering/jsnode-package-services-section": "workspace:*"
+    "@red-cup-engineering/jsnode-package-services-section": "0.2.4"
   }
 }
