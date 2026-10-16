@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/javascript-algebra",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "JavaScript type category — types as objects, functions as morphisms (a multicategory of types, domain is a tuple), and assignability as the carrier relation. Pure structure and operation; closures and section reads live in the javascript-topology package.",
   "repository": {

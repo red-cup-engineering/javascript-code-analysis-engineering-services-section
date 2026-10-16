@@ -4,8 +4,8 @@
   },
   "dependencies": {
     "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "0.3.1",
-    "@red-cup-engineering/javascript-algebra": "0.1.1",
-    "@red-cup-engineering/javascript-node-services-section": "0.3.1"
+    "@red-cup-engineering/javascript-algebra": "0.1.2",
+    "@red-cup-engineering/javascript-node-services-section": "0.3.2"
   },
   "description": "JavaScript computer — projects JavaScript syntax and JSDoc contracts into reusable source-file, executable-behavior, import, documentation, and type-category carriers.",
   "engines": {
@@ -33,6 +33,6 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": false
 }
