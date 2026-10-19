@@ -1,0 +1,8 @@
+[submodule "javascript-computer"]
+	path = services/javascript-computer
+	url = https://github.com/red-cup-engineering/javascript-computer.git
+	branch = main
+[submodule "javascript-algebra"]
+	path = services/javascript-algebra
+	url = https://github.com/red-cup-engineering/javascript-algebra.git
+	branch = main
