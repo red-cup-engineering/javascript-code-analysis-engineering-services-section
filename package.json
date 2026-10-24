@@ -1,5 +1,5 @@
 {
-  "name": "@red-cup-engineering/javascript-code-analysis-engineering-services-section",
+  "name": "@red-cup-engineering/javascript-code-analysis-services-section",
   "version": "0.1.0",
   "type": "module",
   "description": "Groups tooling that reads JavaScript/TypeScript source into category-theoretic carriers without generating or fabricating code.",
