@@ -1,4 +1,4 @@
-# JavaScript Code Analysis Services Section
+# JavaScript Code Analysis Engineering
 
 <!-- 561-group-standards:badges:start -->
 [![Red Cup Engineering](https://img.shields.io/badge/561%20Group-Red%20Cup%20Engineering-c0392b)](https://github.com/red-cup-engineering)
@@ -8,3 +8,6 @@
 <!-- 561-group-standards:badges:end -->
 
 Groups tooling that reads JavaScript/TypeScript source into category-theoretic carriers without generating or fabricating code.
+
+- [JavaScript Computer](services/javascript-computer) reads JavaScript and TypeScript sources, packages, workspaces, and executable behavior.
+- [JavaScript Algebra](services/javascript-algebra) holds the algebraic representations used in source analysis.
