@@ -12,6 +12,7 @@
     ".": "./src/javascript-code-analysis-engine.mjs"
   },
   "dependencies": {
-    "@red-cup-engineering/javascript-parser-service": "0.2.2-dev.0"
+    "@red-cup-engineering/javascript-parser-service": "0.2.2-dev.0",
+    "@red-cup-engineering/semiotic-content-address-system": "^0.1.7 || 0.1.8-dev.0"
   }
 }
